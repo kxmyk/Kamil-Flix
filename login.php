@@ -28,21 +28,16 @@ if (isset($_POST['submitButton'])) {
         <div class="column">
             <div class="header">
                 <img src='assets/images/logo.png' title='logo' alt='site logo'>
-                <h3>Sign Up</h3>
+                <h3>Sign In</h3>
                 <span>to continue to KamilFlix</span>
             </div>
             <form method="POST">
-                <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
-                <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
                 <input type="text" name="username" id="username" placeholder="Username" required>
-                <input type="email" name="email" id="email" placeholder="Email Address" required>
-                <input type="email" name="email" id="email" placeholder="Confirm Email" required>
-                <input type="password" name="password" id="password" placeholder="Password" required>
-                <input type="password" name="password" id="password" placeholder="Confirm password" required>
+                <input type="password" name="password" id="password" placeholder="password" required>
                 <input type="submit" name="submitButton" id="submitButton" name="SUBMIT">
             </form>
             <div>
-                <span>Already have an account? Sign in <a href='login.php' class='signInMessage'>here!</a></span>
+                <span>New to KamilFlix? Sign up <a href='register.php' class='signInMessage'>here!</a></span>
             </div>
 
         </div>
