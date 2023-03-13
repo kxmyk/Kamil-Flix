@@ -1,7 +1,11 @@
 <?php
 
-require_once('includes/classes/FormSanitizer.php');
 require_once('includes/config.php');
+require_once('includes/classes/Account.php');
+require_once('includes/classes/Constants.php');
+require_once('includes/classes/FormSanitizer.php');
+
+$account = new Account($con);
 
 if (isset($_POST['submitButton'])) {
     $firstName = FormSanitizer::sanitizeFormString($_POST['firstName']);
@@ -11,6 +15,8 @@ if (isset($_POST['submitButton'])) {
     $email2 = FormSanitizer::sanitizeFormString($_POST['email2']);
     $password = FormSanitizer::sanitizeFormString($_POST['password']);
     $password2 = FormSanitizer::sanitizeFormString($_POST['password2']);
+
+    $account->register($firstName, $lastName, $username, $email, $email2, $password, $password2);
 }
 
 ?>
@@ -42,7 +48,9 @@ if (isset($_POST['submitButton'])) {
             </div>
             <form method="POST">
                 <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                <?php echo $account->getError(Constants::$firstNameCharacters); ?>
                 <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                <?php echo $account->getError(Constants::$lastNameCharacters); ?>
                 <input type="text" name="username" id="username" placeholder="Username" required>
                 <input type="email" name="email" id="email" placeholder="Email Address" required>
                 <input type="email" name="email2" id="email2" placeholder="Confirm Email" required>
