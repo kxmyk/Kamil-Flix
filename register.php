@@ -8,6 +8,7 @@ require_once('includes/classes/FormSanitizer.php');
 $account = new Account($con);
 
 if (isset($_POST['submitButton'])) {
+    // Form validation
     $firstName = FormSanitizer::sanitizeFormString($_POST['firstName']);
     $lastName = FormSanitizer::sanitizeFormString($_POST['lastName']);
     $username = FormSanitizer::sanitizeFormString($_POST['username']);
@@ -52,10 +53,17 @@ if (isset($_POST['submitButton'])) {
                 <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
                 <?php echo $account->getError(Constants::$lastNameCharacters); ?>
                 <input type="text" name="username" id="username" placeholder="Username" required>
+                <?php echo $account->getError(Constants::$usernameCharacters); ?>
+                <?php echo $account->getError(Constants::$usernameTaken); ?>
                 <input type="email" name="email" id="email" placeholder="Email Address" required>
                 <input type="email" name="email2" id="email2" placeholder="Confirm Email" required>
+                <?php echo $account->getError(Constants::$emailsDontMatch); ?>
+                <?php echo $account->getError(Constants::$emailInvalid); ?>
+                <?php echo $account->getError(Constants::$emailTaken); ?>
                 <input type="password" name="password" id="password" placeholder="Password" required>
                 <input type="password" name="password2" id="password2" placeholder="Confirm password" required>
+                <?php echo $account->getError(Constants::$passwordsDontMatch); ?>
+                <?php echo $account->getError(Constants::$passwordLength); ?>
                 <input type="submit" name="submitButton" id="submitButton" name="SUBMIT">
             </form>
             <div>

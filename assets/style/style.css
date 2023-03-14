@@ -62,7 +62,7 @@ body {
 .signInContainer .column form input[type=submit] {
   height: 2.5rem;
   width: 7rem;
-  margin: 1rem auto 2.5rem;
+  margin: 2rem auto;
   border: none;
   border-radius: 3px;
   font-size: 1rem;
