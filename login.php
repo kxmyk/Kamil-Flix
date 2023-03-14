@@ -1,7 +1,34 @@
 <?php
 
+require('./functions.php');
+
+require_once('includes/config.php');
+require_once('includes/classes/Account.php');
+require_once('includes/classes/Constants.php');
+require_once('includes/classes/FormSanitizer.php');
+
+$account = new Account($con);
+
+
 if (isset($_POST['submitButton'])) {
-    echo 'Form was submitted';
+    // Form validation
+    $username = FormSanitizer::sanitizeFormString($_POST['username']);
+    $password = FormSanitizer::sanitizeFormString($_POST['password']);
+
+    $success = $account->login($username, $password);
+
+    // Store session
+    if ($success) {
+        $_SESSION['userLoggedIn'] = $username;
+        header('Location: index.php');
+    }
+}
+
+function getInputValue($name)
+{
+    if (isset($_POST[$name])) {
+        echo $_POST[$name];
+    }
 }
 
 ?>
@@ -32,8 +59,9 @@ if (isset($_POST['submitButton'])) {
                 <span>to continue to KamilFlix</span>
             </div>
             <form method="POST">
-                <input type="text" name="username" id="username" placeholder="Username" required>
-                <input type="password" name="password" id="password" placeholder="password" required>
+                <input type="text" name="username" id="username" placeholder="Username" value="<?php getInputValue("username") ?>" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <?php echo $account->getError(Constants::$loginFailed); ?>
                 <input type="submit" name="submitButton" id="submitButton" name="SUBMIT">
             </form>
             <div>

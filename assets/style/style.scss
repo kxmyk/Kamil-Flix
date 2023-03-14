@@ -1,7 +1,7 @@
 * {
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
-	color: #333;
+	color: #c0c0c0;
 }
 
 html,
@@ -16,14 +16,20 @@ body {
 	height: 100vh;
 	align-items: center;
 	justify-content: center;
-	background-color: #efefee;
+	background: url('../images/bgImage.jpeg');
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
 
 	.column {
 		min-height: 20rem;
 		max-height: 100%;
 		width: 28.125rem;
 		padding: 1.5rem 2rem;
-		background-color: #fff;
+		background-color: #292929;
 		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 		overflow-y: auto;
 
@@ -43,7 +49,6 @@ body {
 				font-size: 2rem;
 				font-weight: 400;
 				line-height: 2rem;
-				color: #000;
 			}
 			span {
 				margin-top: 0.2rem;
@@ -54,12 +59,19 @@ body {
 			display: flex;
 			flex-direction: column;
 
+			span {
+				text-align: center;
+				font-size: 0.8rem;
+				font-weight: 500;
+			}
+
 			input {
 				height: 2rem;
 				margin: 0.625rem;
 				font-size: 0.875rem;
 				border: none;
-				border-bottom: 1px solid #dedede;
+				border-bottom: 0.5px solid #8b8b8b62;
+				background-color: #292929;
 			}
 
 			input[type='submit'] {
@@ -73,8 +85,10 @@ body {
 				font-weight: 500;
 				cursor: pointer;
 
-				background-color: #e50914;
-				color: #fff;
+				background-color: #e5020db8;
+			}
+			input:focus {
+				outline: none;
 			}
 		}
 		div {
