@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  color: #c0c0c0;
+  color: #cbcbcb;
 }
 
 html,
@@ -80,6 +80,9 @@ body {
   font-weight: 500;
   cursor: pointer;
   background-color: rgba(229, 2, 13, 0.7215686275);
+}
+.signInContainer .column form input[type=submit]:hover {
+  background-color: rgba(229, 2, 13, 0.8);
 }
 .signInContainer .column form input:focus {
   outline: none;

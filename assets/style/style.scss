@@ -1,7 +1,7 @@
 * {
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
-	color: #c0c0c0;
+	color: #cbcbcb;
 }
 
 html,
@@ -87,6 +87,11 @@ body {
 
 				background-color: #e5020db8;
 			}
+
+			input[type='submit']:hover {
+				background-color: #e5020dcc;
+			}
+
 			input:focus {
 				outline: none;
 			}

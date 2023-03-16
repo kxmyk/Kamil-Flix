@@ -36,7 +36,6 @@ class Account
     $query->execute();
 
     if ($query->rowCount() == 1) {
-      echo 'dziaaa';
       return true;
     }
     array_push($this->errorArray, Constants::$loginFailed);
