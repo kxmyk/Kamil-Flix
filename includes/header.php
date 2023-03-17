@@ -1,7 +1,9 @@
 <?php
 require_once('./includes/config.php');
 require_once('./includes/classes/PreviewProvider.php');
+require_once('./includes/classes/CategoryContainers.php');
 require_once('./includes/classes/Entity.php');
+require_once('./includes/classes/EntityProvider.php');
 
 if (!isset($_SESSION['userLoggedIn'])) {
   header('location: register.php');
@@ -17,7 +19,7 @@ $userLoggedIn = $_SESSION['userLoggedIn'];
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to NetflixClone</title>
+  <title>KamilFlix 🍿 Watch shows on demand.</title>
   <!-- css -->
   <link rel='stylesheet' type='text/css' href='assets/style/style.css'>
   <!-- fonts -->
@@ -33,3 +35,4 @@ $userLoggedIn = $_SESSION['userLoggedIn'];
 </head>
 
 <body>
+  <div class="wrapper">
