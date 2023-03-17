@@ -1,0 +1,15 @@
+@use 'homepage.scss';
+@use 'loginAndRegister.scss';
+
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	color: #cbcbcb;
+}
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}

@@ -1,21 +1,10 @@
-* {
-	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
-	color: #cbcbcb;
-}
-
-html,
-body {
-	height: 100%;
-	padding: 0;
-	margin: 0;
-}
-
+// authentication - login/register page styles
 .signInContainer {
 	display: flex;
 	height: 100vh;
 	align-items: center;
 	justify-content: center;
+
 	background: url('../images/bgImage.jpeg');
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -29,9 +18,9 @@ body {
 		max-height: 100%;
 		width: 28.125rem;
 		padding: 1.5rem 2rem;
+		overflow-y: auto;
 		background-color: #292929;
 		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-		overflow-y: auto;
 
 		.header {
 			display: flex;
@@ -68,6 +57,7 @@ body {
 			input {
 				height: 2rem;
 				margin: 0.625rem;
+
 				font-size: 0.875rem;
 				border: none;
 				border-bottom: 0.5px solid #8b8b8b62;
