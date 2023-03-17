@@ -1,5 +1,5 @@
 .wrapper {
-  min-width: 66rem;
+  min-width: 50rem;
   min-height: 100%;
   background-color: #141414;
 }
@@ -49,6 +49,36 @@
   background-color: #e6e6e6;
   color: #000;
   cursor: pointer;
+}
+.wrapper .previewCategories .entities {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.wrapper .previewCategories .category {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0;
+}
+.wrapper .previewCategories .category h3 {
+  color: #e5e5e5;
+}
+.wrapper .previewCategories .category a {
+  text-decoration: none;
+}
+.wrapper .previewCategories .category a h3:hover {
+  color: #fff;
+}
+.wrapper .previewCategories .category .previewContainer.small {
+  display: inline-flex;
+  width: 14rem;
+  height: 8rem;
+  margin-right: 0.25rem;
+}
+.wrapper .previewCategories .category .previewContainer.small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .signInContainer {
