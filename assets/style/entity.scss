@@ -1,0 +1,56 @@
+.wrapper {
+	.season {
+		display: flex;
+		flex-direction: column;
+		padding: 0.7rem 3rem;
+
+		.videos {
+			overflow-x: auto;
+			overflow-y: hidden;
+			white-space: nowrap;
+
+			.episodeContainer {
+				display: inline-flex;
+				margin-right: 0.25rem;
+				justify-content: center;
+
+				.contents {
+					position: relative;
+					display: flex;
+					flex-direction: column;
+					width: 15.5rem;
+
+					img {
+						width: 15rem;
+						height: 9rem;
+						object-fit: cover;
+					}
+				}
+				.videoInfo {
+					max-height: 12.5rem;
+					overflow-y: auto;
+					h4,
+					span {
+						width: 100%;
+						white-space: normal;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.noScroll {
+		.entities {
+			white-space: normal;
+		}
+	}
+	.errorBanner {
+		position: absolute;
+		width: 100%;
+		top: 20%;
+
+		text-align: center;
+		font-size: 1.5rem;
+		color: #fff;
+	}
+}

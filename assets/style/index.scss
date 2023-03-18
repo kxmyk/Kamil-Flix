@@ -1,5 +1,6 @@
-@use 'homepage.scss';
 @use 'loginAndRegister.scss';
+@use 'homepage.scss';
+@use 'entity.scss';
 
 * {
 	box-sizing: border-box;
@@ -12,4 +13,8 @@ body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+}
+
+a {
+	text-decoration: none;
 }

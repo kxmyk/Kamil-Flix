@@ -1,86 +1,3 @@
-.wrapper {
-  min-width: 50rem;
-  min-height: 100%;
-  background-color: #141414;
-}
-.wrapper .previewContainer {
-  position: relative;
-  display: flex;
-}
-.wrapper .previewContainer .previewImage,
-.wrapper .previewContainer .previewVideo {
-  width: 100%;
-}
-.wrapper .previewContainer .previewOverlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.wrapper .previewContainer .previewOverlay .mainDetails {
-  position: relative;
-  display: flex;
-  top: 35%;
-  margin-left: 3rem;
-  flex-direction: column;
-}
-.wrapper .previewContainer .previewOverlay .mainDetails h3 {
-  margin: 0.9rem 0;
-  font-size: 2.5rem;
-  color: #fff;
-}
-.wrapper .previewContainer .previewOverlay .mainDetails button {
-  height: 2.8rem;
-  max-height: 3.1rem;
-  min-width: 9.5rem;
-  margin-bottom: 1rem;
-  margin-right: 0.3rem;
-  padding: 0 2.4rem;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 2px;
-  background-color: rgba(51, 51, 51, 0.6);
-  color: #fff;
-}
-.wrapper .previewContainer .previewOverlay .mainDetails button i {
-  color: inherit;
-}
-.wrapper .previewContainer .previewOverlay .mainDetails button:hover {
-  background-color: #e6e6e6;
-  color: #000;
-  cursor: pointer;
-}
-.wrapper .previewCategories .entities {
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-}
-.wrapper .previewCategories .category {
-  display: flex;
-  flex-direction: column;
-  padding: 0.7rem 0;
-}
-.wrapper .previewCategories .category h3 {
-  color: #e5e5e5;
-}
-.wrapper .previewCategories .category a {
-  text-decoration: none;
-}
-.wrapper .previewCategories .category a h3:hover {
-  color: #fff;
-}
-.wrapper .previewCategories .category .previewContainer.small {
-  display: inline-flex;
-  width: 14rem;
-  height: 8rem;
-  margin-right: 0.25rem;
-}
-.wrapper .previewCategories .category .previewContainer.small img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .signInContainer {
   display: flex;
   height: 100vh;
@@ -162,6 +79,143 @@
   justify-content: center;
   font-size: 0.9rem;
 }
+.signInContainer .column div a {
+  text-decoration: underline;
+}
+
+.wrapper {
+  min-width: 50rem;
+  min-height: 100%;
+  background-color: #141414;
+}
+.wrapper .previewContainer {
+  position: relative;
+  display: flex;
+}
+.wrapper .previewContainer .previewImage,
+.wrapper .previewContainer .previewVideo {
+  width: 100%;
+}
+.wrapper .previewContainer .previewOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.wrapper .previewContainer .previewOverlay .mainDetails {
+  position: relative;
+  display: flex;
+  top: 35%;
+  margin-left: 3rem;
+  flex-direction: column;
+}
+.wrapper .previewContainer .previewOverlay .mainDetails h3 {
+  margin: 0.9rem 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+.wrapper .previewContainer .previewOverlay .mainDetails button {
+  height: 2.8rem;
+  max-height: 3.1rem;
+  min-width: 9.5rem;
+  margin-bottom: 1rem;
+  margin-right: 0.3rem;
+  padding: 0 2.4rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(51, 51, 51, 0.6);
+  color: #fff;
+}
+.wrapper .previewContainer .previewOverlay .mainDetails button i {
+  color: inherit;
+}
+.wrapper .previewContainer .previewOverlay .mainDetails button:hover {
+  background-color: #e6e6e6;
+  color: #000;
+  cursor: pointer;
+}
+.wrapper .previewCategories {
+  padding: 0 2rem;
+}
+.wrapper .previewCategories .entities {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.wrapper .previewCategories .category {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0;
+}
+.wrapper .previewCategories .category h3 {
+  color: #e5e5e5;
+}
+.wrapper .previewCategories .category a {
+  text-decoration: none;
+}
+.wrapper .previewCategories .category a h3:hover {
+  color: #fff;
+}
+.wrapper .previewCategories .category .previewContainer.small {
+  display: inline-flex;
+  width: 14rem;
+  height: 8rem;
+  margin-right: 0.25rem;
+}
+.wrapper .previewCategories .category .previewContainer.small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper .season {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 3rem;
+}
+.wrapper .season .videos {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.wrapper .season .videos .episodeContainer {
+  display: inline-flex;
+  margin-right: 0.25rem;
+  justify-content: center;
+}
+.wrapper .season .videos .episodeContainer .contents {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 15.5rem;
+}
+.wrapper .season .videos .episodeContainer .contents img {
+  width: 15rem;
+  height: 9rem;
+  object-fit: cover;
+}
+.wrapper .season .videos .episodeContainer .videoInfo {
+  max-height: 12.5rem;
+  overflow-y: auto;
+}
+.wrapper .season .videos .episodeContainer .videoInfo h4,
+.wrapper .season .videos .episodeContainer .videoInfo span {
+  width: 100%;
+  white-space: normal;
+  color: #fff;
+}
+.wrapper .noScroll .entities {
+  white-space: normal;
+}
+.wrapper .errorBanner {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
 
 * {
   box-sizing: border-box;
@@ -174,6 +228,10 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

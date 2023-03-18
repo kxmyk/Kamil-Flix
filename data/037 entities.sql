@@ -88,7 +88,8 @@ INSERT INTO `entities` (`id`, `name`, `thumbnail`, `preview`, `categoryId`) VALU
 (96, 'Interstellar', 'entities/thumbnails/int.jpg', 'entities/previews/3.mp4', 7),
 (97, 'Transformers', 'entities/thumbnails/tra.jpg', 'entities/previews/1.mp4', 7),
 (98, 'Cloudy with a Chance of Meatballs', 'entities/thumbnails/cwc.jpg', 'entities/previews/4.mp4', 13),
-(99, 'District 9', 'entities/thumbnails/d9.jpg', 'entities/previews/5.mp4', 9);
+(99, 'District 9', 'entities/thumbnails/d9.jpg', 'entities/previews/5.mp4', 9),
+(100, 'Bleach', 'entities/thumbnails/blc.png', 'entities/previews/5.mp4', 14);
 
 --
 -- Indexes for dumped tables
