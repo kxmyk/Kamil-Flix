@@ -1,4 +1,5 @@
 .wrapper {
+	// Select episode screen
 	.season {
 		display: flex;
 		flex-direction: column;
@@ -44,6 +45,41 @@
 			white-space: normal;
 		}
 	}
+
+	// watch episode screen
+	.watchContainer {
+		.videoControls {
+			position: absolute;
+			display: flex;
+			width: 100%;
+			align-items: center;
+			z-index: 1;
+
+			background-color: rgba(0, 0, 0, 0.3);
+
+			button {
+				padding: 3rem;
+				font-size: 3rem;
+				border: none;
+				cursor: pointer;
+
+				background-color: transparent;
+				i {
+					color: #fff;
+				}
+				i:hover {
+					color: #cbcbcb;
+				}
+			}
+			h1 {
+				color: #fff;
+			}
+		}
+		video {
+			width: 100%;
+		}
+	}
+	// episode not found screen
 	.errorBanner {
 		position: absolute;
 		width: 100%;

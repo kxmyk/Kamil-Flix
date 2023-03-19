@@ -61,13 +61,6 @@ class Video
     return $this->sqlData["entityId"];
   }
 
-  public function incrementViews()
-  {
-    $query = $this->con->prepare("UPDATE videos SET views=views+1 WHERE id=:id");
-    $query->bindValue(":id", $this->getId());
-    $query->execute();
-  }
-
   public function getSeasonAndEpisode()
   {
     if ($this->isMovie()) {
@@ -105,5 +98,11 @@ class Video
     $query->execute();
 
     return $query->rowCount() != 0;
+  }
+  public function incrementViews()
+  {
+    $query = $this->con->prepare('UPDATE videos SET views=views+1 WHERE id=:id');
+    $query->bindValue(':id', $this->getId());
+    $query->execute();
   }
 }

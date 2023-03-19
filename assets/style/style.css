@@ -208,6 +208,33 @@
 .wrapper .noScroll .entities {
   white-space: normal;
 }
+.wrapper .watchContainer .videoControls {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.wrapper .watchContainer .videoControls button {
+  padding: 3rem;
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.wrapper .watchContainer .videoControls button i {
+  color: #fff;
+}
+.wrapper .watchContainer .videoControls button i:hover {
+  color: #cbcbcb;
+}
+.wrapper .watchContainer .videoControls h1 {
+  color: #fff;
+}
+.wrapper .watchContainer video {
+  width: 100%;
+}
 .wrapper .errorBanner {
   position: absolute;
   width: 100%;
