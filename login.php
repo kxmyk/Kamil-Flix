@@ -56,7 +56,7 @@ if (isset($_POST['submitButton'])) {
             <form method="POST">
                 <input type="text" name="username" id="username" placeholder="Username" value="<?php getInputValue("username") ?>" required>
                 <input type="password" name="password" id="password" placeholder="Password" required>
-                <?php echo $account->getError(Constants::$loginFailed); ?>
+                <?php echo $account->getError(Constants::$loginFailed) ?>
                 <input type="submit" name="submitButton" id="submitButton" name="SUBMIT">
             </form>
             <div>

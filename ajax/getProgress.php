@@ -7,7 +7,8 @@ if (isset($_POST["videoId"]) && isset($_POST["username"])) {
   $username = strip_tags($_POST["username"]);
 
   $query = $con->prepare(
-    "SELECT progress FROM videoProgress WHERE username=:username AND videoId=:videoId"
+    "SELECT progress FROM videoProgress 
+    WHERE username=:username AND videoId=:videoId"
   );
   $query->bindValue(":username", $username);
   $query->bindValue(":videoId", $videoId);

@@ -1,5 +1,12 @@
+$(document).scroll(function () {
+	$('.topBar').toggleClass(
+		'scrolled',
+		$(this).scrollTop() > $('.topBar').height()
+	);
+});
+
 function volumeToggle(button) {
-	var muted = $('.previewVideo').prop('muted');
+	const muted = $('.previewVideo').prop('muted');
 	$('.previewVideo').prop('muted', !muted);
 
 	$(button).find('i').toggleClass('fa-volume-mute');
@@ -16,7 +23,7 @@ function goBack() {
 }
 
 function startHideTimer() {
-	var timeout = null;
+	let timeout = null;
 
 	$(document).on('mousemove', () => {
 		clearTimeout(timeout);
@@ -37,7 +44,7 @@ function initVideo(videoId, username) {
 function updateProgressTimer(videoId, username) {
 	addDuration(videoId, username);
 
-	var timer;
+	let timer;
 
 	$('video')
 		.on('playing', (event) => {

@@ -55,6 +55,7 @@
   font-size: 0.875rem;
   border: none;
   border-bottom: 0.5px solid rgba(139, 139, 139, 0.3843137255);
+  border-radius: 0.3rem;
   background-color: #292929;
 }
 .signInContainer .column form input[type=submit] {
@@ -62,7 +63,7 @@
   width: 7rem;
   margin: 2rem auto;
   border: none;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -81,6 +82,54 @@
 }
 .signInContainer .column div a {
   text-decoration: underline;
+}
+
+.topBar {
+  position: fixed;
+  min-width: 50rem;
+  width: 100%;
+  height: 4rem;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 1;
+  transition: background-color 200ms linear;
+}
+.topBar .logoContainer {
+  height: 3.5rem;
+}
+.topBar .logoContainer img {
+  margin: 0.3rem;
+  padding-bottom: 0.3rem;
+  height: 100%;
+}
+.topBar .navLinks {
+  display: flex;
+  list-style: none;
+}
+.topBar .navLinks a {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+.topBar .navLinks a:hover {
+  color: #cbcbcb;
+}
+.topBar .rightItems {
+  flex: 1;
+  text-align: right;
+}
+.topBar .rightItems i {
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+.topBar .rightItems i:hover {
+  color: #cbcbcb;
+}
+
+.scrolled {
+  background-color: #141414;
+  transition: background-color 200ms linear;
 }
 
 .wrapper {
@@ -105,32 +154,28 @@
 .wrapper .previewContainer .previewOverlay .mainDetails {
   position: relative;
   display: flex;
-  top: 35%;
-  margin-left: 3rem;
+  top: 30%;
+  margin-left: 4rem;
   flex-direction: column;
 }
 .wrapper .previewContainer .previewOverlay .mainDetails h3 {
   margin: 0.9rem 0;
   font-size: 2.5rem;
-  color: #fff;
 }
 .wrapper .previewContainer .previewOverlay .mainDetails h4 {
   margin: 0.7rem 0;
   font-size: 1.1rem;
-  color: #fff;
 }
 .wrapper .previewContainer .previewOverlay .mainDetails button {
   height: 2.8rem;
   max-height: 3.1rem;
   min-width: 9.5rem;
-  margin-bottom: 1rem;
-  margin-right: 0.3rem;
+  margin: 0.6rem 0.3rem 1rem 0;
   padding: 0 2.4rem;
   font-size: 1.1rem;
   border: none;
   border-radius: 2px;
   background-color: rgba(51, 51, 51, 0.6);
-  color: #fff;
 }
 .wrapper .previewContainer .previewOverlay .mainDetails button i {
   color: inherit;
@@ -141,67 +186,48 @@
   color: #000;
   cursor: pointer;
 }
-.wrapper .previewCategories {
-  padding: 0 2rem;
+.wrapper .textboxContainer {
+  padding: 5.5rem 2.5rem;
 }
-.wrapper .previewCategories .entities {
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
+.wrapper .textboxContainer .searchInput {
+  height: 3rem;
+  width: 37rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #dedede;
+  border-radius: 0.2rem;
+  background-color: transparent;
 }
-.wrapper .previewCategories .category {
-  display: flex;
-  flex-direction: column;
-  padding: 0.7rem 0;
-}
-.wrapper .previewCategories .category h3 {
-  color: #e5e5e5;
-}
-.wrapper .previewCategories .category a {
-  text-decoration: none;
-}
-.wrapper .previewCategories .category a h3:hover {
-  color: #fff;
-}
-.wrapper .previewCategories .category .previewContainer.small {
-  display: inline-flex;
-  width: 14rem;
-  height: 8rem;
-  margin-right: 0.25rem;
-}
-.wrapper .previewCategories .category .previewContainer.small img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.wrapper .textboxContainer .searchInput:focus {
+  outline: none;
 }
 
-.wrapper .season {
+.season {
   display: flex;
   flex-direction: column;
   padding: 0.7rem 3rem;
 }
-.wrapper .season .videos {
+.season .videos {
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
 }
-.wrapper .season .videos .episodeContainer {
+.season .videos .episodeContainer {
   display: inline-flex;
   margin-right: 0.25rem;
   justify-content: center;
 }
-.wrapper .season .videos .episodeContainer .contents {
+.season .videos .episodeContainer .contents {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 15.5rem;
 }
-.wrapper .season .videos .episodeContainer .contents img {
+.season .videos .episodeContainer .contents img {
   width: 15rem;
   height: 9rem;
   object-fit: cover;
 }
-.wrapper .season .videos .episodeContainer i {
+.season .videos .episodeContainer i {
   position: absolute;
   top: 0.3rem;
   left: 0.3rem;
@@ -209,20 +235,21 @@
   opacity: 0.9;
   color: #2ecc71;
 }
-.wrapper .season .videos .episodeContainer .videoInfo {
+.season .videos .episodeContainer .videoInfo {
   max-height: 12.5rem;
   overflow-y: auto;
 }
-.wrapper .season .videos .episodeContainer .videoInfo h4,
-.wrapper .season .videos .episodeContainer .videoInfo span {
+.season .videos .episodeContainer .videoInfo h4,
+.season .videos .episodeContainer .videoInfo span {
   width: 100%;
   white-space: normal;
-  color: #fff;
 }
-.wrapper .noScroll .entities {
+
+.noScroll .entities {
   white-space: normal;
 }
-.wrapper .watchContainer .goBack {
+
+.watchContainer .goBack {
   position: absolute;
   display: flex;
   width: 100%;
@@ -230,7 +257,7 @@
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.wrapper .watchContainer .videoControls {
+.watchContainer .videoControls {
   position: absolute;
   display: flex;
   width: 100%;
@@ -239,50 +266,124 @@
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.wrapper .watchContainer button {
+.watchContainer button {
   padding: 3rem;
   font-size: 3rem;
   border: none;
   cursor: pointer;
   background-color: transparent;
 }
-.wrapper .watchContainer button i {
-  color: #fff;
-}
-.wrapper .watchContainer button i:hover {
+.watchContainer button i:hover {
   color: #cbcbcb;
 }
-.wrapper .watchContainer h1 {
-  color: #fff;
+
+button:hover {
+  color: #cbcbcb;
 }
-.wrapper video {
+
+video {
   width: 100%;
 }
-.wrapper .upNext {
+
+.upNext {
   height: 100%;
   justify-content: center;
 }
-.wrapper .upNext .upNextContainer h2,
-.wrapper .upNext .upNextContainer h3 {
-  color: #fff;
-}
-.wrapper .upNext .upNextContainer button {
+.upNext .upNextContainer button {
   padding: 0;
-  color: #fff;
 }
-.wrapper .errorBanner {
+
+.errorBanner {
   position: absolute;
   width: 100%;
   top: 20%;
   text-align: center;
   font-size: 1.5rem;
-  color: #fff;
+}
+
+.previewCategories {
+  padding: 0 2rem;
+}
+.previewCategories .entities {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.previewCategories .category {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem 0;
+}
+.previewCategories .category a {
+  text-decoration: none;
+}
+.previewCategories .category a h3:hover {
+  color: #cbcbcb;
+}
+.previewCategories .category .previewContainer.small {
+  display: inline-flex;
+  width: 14rem;
+  height: 8rem;
+  margin-right: 0.25rem;
+}
+.previewCategories .category .previewContainer.small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.settingsContainer {
+  width: 80%;
+  margin: 0 auto auto;
+  padding-top: 4rem;
+}
+.settingsContainer .formSection {
+  display: flex;
+  flex-direction: column;
+}
+.settingsContainer .formSection input {
+  height: 2.3rem;
+  width: 60%;
+  margin: 0.625rem;
+  font-size: 0.875rem;
+  border: none;
+  border-bottom: 0.5px solid rgba(139, 139, 139, 0.3843137255);
+  border-radius: 3px;
+  background-color: #292929;
+}
+.settingsContainer .formSection input[type=submit] {
+  height: 2.5rem;
+  width: 7rem;
+  margin: 2rem 0.7rem;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: rgba(229, 2, 13, 0.7215686275);
+}
+.settingsContainer .formSection input[type=submit]:hover {
+  background-color: rgba(229, 2, 13, 0.8);
+}
+.settingsContainer .formSection input:focus {
+  outline: none;
+}
+.settingsContainer .formSection .message {
+  position: relative;
+  left: 1rem;
+}
+.settingsContainer .formSection .message .alertSuccess,
+.settingsContainer .formSection .message .alertError {
+  margin: 0.6rem 0;
+}
+.settingsContainer .formSection .message .alertError {
+  color: rgba(229, 2, 13, 0.8);
 }
 
 * {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  color: #cbcbcb;
+  color: #f4f4f4;
 }
 
 html,

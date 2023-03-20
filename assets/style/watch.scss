@@ -1,0 +1,59 @@
+.watchContainer {
+	.goBack {
+		position: absolute;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		z-index: 2;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	.videoControls {
+		position: absolute;
+		display: flex;
+		width: 100%;
+		height: 60%;
+		align-items: center;
+		z-index: 1;
+
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	button {
+		padding: 3rem;
+		font-size: 3rem;
+		border: none;
+		cursor: pointer;
+
+		background-color: transparent;
+
+		i:hover {
+			color: #cbcbcb;
+		}
+	}
+}
+button:hover {
+	color: #cbcbcb;
+}
+video {
+	width: 100%;
+}
+
+.upNext {
+	height: 100%;
+	justify-content: center;
+
+	.upNextContainer {
+		button {
+			padding: 0;
+		}
+	}
+}
+
+// episode not found screen
+.errorBanner {
+	position: absolute;
+	width: 100%;
+	top: 20%;
+
+	text-align: center;
+	font-size: 1.5rem;
+}

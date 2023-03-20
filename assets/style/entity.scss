@@ -1,127 +1,52 @@
-.wrapper {
-	// Select episode screen
-	.season {
-		display: flex;
-		flex-direction: column;
-		padding: 0.7rem 3rem;
+.season {
+	display: flex;
+	flex-direction: column;
+	padding: 0.7rem 3rem;
 
-		.videos {
-			overflow-x: auto;
-			overflow-y: hidden;
-			white-space: nowrap;
+	.videos {
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
 
-			.episodeContainer {
-				display: inline-flex;
-				margin-right: 0.25rem;
-				justify-content: center;
+		.episodeContainer {
+			display: inline-flex;
+			margin-right: 0.25rem;
+			justify-content: center;
 
-				.contents {
-					position: relative;
-					display: flex;
-					flex-direction: column;
-					width: 15.5rem;
+			.contents {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				width: 15.5rem;
 
-					img {
-						width: 15rem;
-						height: 9rem;
-						object-fit: cover;
-					}
-				}
-				i {
-					position: absolute;
-					top: 0.3rem;
-					left: 0.3rem;
-					font-size: 1.4rem;
-					opacity: 0.9;
-					color: #2ecc71;
-				}
-				.videoInfo {
-					max-height: 12.5rem;
-					overflow-y: auto;
-					h4,
-					span {
-						width: 100%;
-						white-space: normal;
-						color: #fff;
-					}
+				img {
+					width: 15rem;
+					height: 9rem;
+					object-fit: cover;
 				}
 			}
-		}
-	}
-	.noScroll {
-		.entities {
-			white-space: normal;
-		}
-	}
-
-	// watch episode screen
-
-	.watchContainer {
-		.goBack {
-			position: absolute;
-			display: flex;
-			width: 100%;
-			align-items: center;
-			z-index: 2;
-			background-color: rgba(0, 0, 0, 0.3);
-		}
-		.videoControls {
-			position: absolute;
-			display: flex;
-			width: 100%;
-			height: 60%;
-			align-items: center;
-			z-index: 1;
-
-			background-color: rgba(0, 0, 0, 0.3);
-		}
-		button {
-			padding: 3rem;
-			font-size: 3rem;
-			border: none;
-			cursor: pointer;
-
-			background-color: transparent;
 			i {
-				color: #fff;
+				position: absolute;
+				top: 0.3rem;
+				left: 0.3rem;
+				font-size: 1.4rem;
+				opacity: 0.9;
+				color: #2ecc71;
 			}
-			i:hover {
-				color: #cbcbcb;
-			}
-		}
-		h1 {
-			color: #fff;
-		}
-	}
-	video {
-		width: 100%;
-	}
-
-	.upNext {
-		height: 100%;
-		justify-content: center;
-
-		.upNextContainer {
-			h2,
-			h3 {
-				color: #fff;
-			}
-
-			button {
-				padding: 0;
-				color: #fff;
+			.videoInfo {
+				max-height: 12.5rem;
+				overflow-y: auto;
+				h4,
+				span {
+					width: 100%;
+					white-space: normal;
+				}
 			}
 		}
 	}
-
-	// episode not found screen
-	.errorBanner {
-		position: absolute;
-		width: 100%;
-		top: 20%;
-
-		text-align: center;
-		font-size: 1.5rem;
-		color: #fff;
+}
+.noScroll {
+	.entities {
+		white-space: normal;
 	}
 }

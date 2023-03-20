@@ -12,6 +12,7 @@
 		.previewVideo {
 			width: 100%;
 		}
+
 		.previewOverlay {
 			position: absolute;
 			width: 100%;
@@ -21,34 +22,32 @@
 			.mainDetails {
 				position: relative;
 				display: flex;
-				top: 35%;
-				margin-left: 3rem;
+				top: 30%;
+				margin-left: 4rem;
 				flex-direction: column;
 
 				h3 {
 					margin: 0.9rem 0;
 					font-size: 2.5rem;
-					color: #fff;
 				}
+
 				h4 {
 					margin: 0.7rem 0;
 					font-size: 1.1rem;
-					color: #fff;
 				}
+
 				button {
 					height: 2.8rem;
 					max-height: 3.1rem;
 					min-width: 9.5rem;
-					margin-bottom: 1rem;
-					margin-right: 0.3rem;
+					margin: 0.6rem 0.3rem 1rem 0;
 					padding: 0 2.4rem;
 
 					font-size: 1.1rem;
 					border: none;
 					border-radius: 2px;
-
 					background-color: rgba(51, 51, 51, 0.6);
-					color: #fff;
+
 					i {
 						color: inherit;
 						padding-right: 0.5rem;
@@ -64,40 +63,20 @@
 		}
 	}
 
-	.previewCategories {
-		padding: 0 2rem;
+	// Searchbar
+	.textboxContainer {
+		padding: 5.5rem 2.5rem;
+		.searchInput {
+			height: 3rem;
+			width: 37rem;
+			padding: 0.3rem 0.6rem;
 
-		.entities {
-			overflow-x: auto;
-			overflow-y: hidden;
-			white-space: nowrap;
+			border: 1px solid #dedede;
+			border-radius: 0.2rem;
+			background-color: transparent;
 		}
-
-		.category {
-			display: flex;
-			flex-direction: column;
-			padding: 0.7rem 0;
-			h3 {
-				color: #e5e5e5;
-			}
-			a {
-				text-decoration: none;
-				h3:hover {
-					color: #fff;
-				}
-			}
-			.previewContainer.small {
-				display: inline-flex;
-				width: 14rem;
-				height: 8rem;
-				margin-right: 0.25rem;
-
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
+		.searchInput:focus {
+			outline: none;
 		}
 	}
 }

@@ -1,11 +1,15 @@
 @use 'loginAndRegister.scss';
+@use 'navbar.scss';
 @use 'homepage.scss';
 @use 'entity.scss';
+@use 'watch.scss';
+@use 'previewCategories.scss';
+@use 'userProfile.scss';
 
 * {
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
-	color: #cbcbcb;
+	color: #f4f4f4;
 }
 
 html,
