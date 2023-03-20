@@ -2,12 +2,19 @@
 require_once('/Users/kamillukasiuk/Desktop/webDev/netflix-clone/includes/config.php');
 
 
-if (isset($_POST["videoId"]) && isset($_POST["username"]) && isset($_POST["progress"])) {
+if (
+  isset($_POST["videoId"]) &&
+  isset($_POST["username"]) &&
+  isset($_POST["progress"])
+) {
   $videoId = strip_tags($_POST["videoId"]);
   $username = strip_tags($_POST["username"]);
   $progress = strip_tags($_POST["progress"]);
 
-  $query = $con->prepare("UPDATE videoProgress SET progress=:progress, dateModified=NOW() WHERE username=:username AND videoId=:videoId");
+  $query = $con->prepare(
+    "UPDATE videoProgress SET progress=:progress, dateModified=NOW() 
+    WHERE username=:username AND videoId=:videoId"
+  );
   $query->bindValue(":progress", $progress);
   $query->bindValue(":username", $username);
   $query->bindValue(":videoId", $videoId);

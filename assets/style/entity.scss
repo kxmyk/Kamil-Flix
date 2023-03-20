@@ -27,6 +27,14 @@
 						object-fit: cover;
 					}
 				}
+				i {
+					position: absolute;
+					top: 0.3rem;
+					left: 0.3rem;
+					font-size: 1.4rem;
+					opacity: 0.9;
+					color: #2ecc71;
+				}
 				.videoInfo {
 					max-height: 12.5rem;
 					overflow-y: auto;
@@ -47,38 +55,65 @@
 	}
 
 	// watch episode screen
+
 	.watchContainer {
-		.videoControls {
+		.goBack {
 			position: absolute;
 			display: flex;
 			width: 100%;
 			align-items: center;
+			z-index: 2;
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+		.videoControls {
+			position: absolute;
+			display: flex;
+			width: 100%;
+			height: 60%;
+			align-items: center;
 			z-index: 1;
 
 			background-color: rgba(0, 0, 0, 0.3);
+		}
+		button {
+			padding: 3rem;
+			font-size: 3rem;
+			border: none;
+			cursor: pointer;
+
+			background-color: transparent;
+			i {
+				color: #fff;
+			}
+			i:hover {
+				color: #cbcbcb;
+			}
+		}
+		h1 {
+			color: #fff;
+		}
+	}
+	video {
+		width: 100%;
+	}
+
+	.upNext {
+		height: 100%;
+		justify-content: center;
+
+		.upNextContainer {
+			h2,
+			h3 {
+				color: #fff;
+			}
 
 			button {
-				padding: 3rem;
-				font-size: 3rem;
-				border: none;
-				cursor: pointer;
-
-				background-color: transparent;
-				i {
-					color: #fff;
-				}
-				i:hover {
-					color: #cbcbcb;
-				}
-			}
-			h1 {
+				padding: 0;
 				color: #fff;
 			}
 		}
-		video {
-			width: 100%;
-		}
 	}
+
 	// episode not found screen
 	.errorBanner {
 		position: absolute;

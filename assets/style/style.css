@@ -114,6 +114,11 @@
   font-size: 2.5rem;
   color: #fff;
 }
+.wrapper .previewContainer .previewOverlay .mainDetails h4 {
+  margin: 0.7rem 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
 .wrapper .previewContainer .previewOverlay .mainDetails button {
   height: 2.8rem;
   max-height: 3.1rem;
@@ -129,6 +134,7 @@
 }
 .wrapper .previewContainer .previewOverlay .mainDetails button i {
   color: inherit;
+  padding-right: 0.5rem;
 }
 .wrapper .previewContainer .previewOverlay .mainDetails button:hover {
   background-color: #e6e6e6;
@@ -195,6 +201,14 @@
   height: 9rem;
   object-fit: cover;
 }
+.wrapper .season .videos .episodeContainer i {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  color: #2ecc71;
+}
 .wrapper .season .videos .episodeContainer .videoInfo {
   max-height: 12.5rem;
   overflow-y: auto;
@@ -208,32 +222,53 @@
 .wrapper .noScroll .entities {
   white-space: normal;
 }
-.wrapper .watchContainer .videoControls {
+.wrapper .watchContainer .goBack {
   position: absolute;
   display: flex;
   width: 100%;
   align-items: center;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.wrapper .watchContainer .videoControls {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 60%;
+  align-items: center;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.wrapper .watchContainer .videoControls button {
+.wrapper .watchContainer button {
   padding: 3rem;
   font-size: 3rem;
   border: none;
   cursor: pointer;
   background-color: transparent;
 }
-.wrapper .watchContainer .videoControls button i {
+.wrapper .watchContainer button i {
   color: #fff;
 }
-.wrapper .watchContainer .videoControls button i:hover {
+.wrapper .watchContainer button i:hover {
   color: #cbcbcb;
 }
-.wrapper .watchContainer .videoControls h1 {
+.wrapper .watchContainer h1 {
   color: #fff;
 }
-.wrapper .watchContainer video {
+.wrapper video {
   width: 100%;
+}
+.wrapper .upNext {
+  height: 100%;
+  justify-content: center;
+}
+.wrapper .upNext .upNextContainer h2,
+.wrapper .upNext .upNextContainer h3 {
+  color: #fff;
+}
+.wrapper .upNext .upNextContainer button {
+  padding: 0;
+  color: #fff;
 }
 .wrapper .errorBanner {
   position: absolute;

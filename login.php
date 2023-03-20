@@ -34,7 +34,8 @@ if (isset($_POST['submitButton'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to NetflixClone</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <title>Sign In to KamilFlix 🍿 Movies, TV shows, and more!</title>
     <!-- css -->
     <link rel='stylesheet' type='text/css' href='assets/style/style.css'>
     <!-- fonts -->

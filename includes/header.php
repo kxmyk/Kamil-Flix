@@ -8,6 +8,7 @@ require_once('./includes/classes/ErrorMessage.php');
 require_once('./includes/classes/SeasonProvider.php');
 require_once('./includes/classes/Season.php');
 require_once('./includes/classes/Video.php');
+require_once('./includes/classes/VideoProvider.php');
 
 if (!isset($_SESSION['userLoggedIn'])) {
   header('location: register.php');
@@ -22,7 +23,8 @@ $userLoggedIn = $_SESSION['userLoggedIn'];
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">;
+  <link rel="icon" href="../assets/images/favicon.ico">
   <title>KamilFlix 🍿 Movies, TV shows, and more!</title>
   <!-- css -->
   <link rel='stylesheet' type='text/css' href='assets/style/style.css'>
@@ -40,3 +42,8 @@ $userLoggedIn = $_SESSION['userLoggedIn'];
 
 <body>
   <div class="wrapper">
+    <div class="topBar">
+      <div class="logoContainer">
+        <a href="index.php"><img src="assets/images/logo.png" alt="Logo"></a>
+      </div>
+    </div>

@@ -1,9 +1,9 @@
-function volumeToggle(btn) {
-	let muted = $('.previewVideo').prop('muted');
+function volumeToggle(button) {
+	var muted = $('.previewVideo').prop('muted');
 	$('.previewVideo').prop('muted', !muted);
 
-	$(btn).find('i').toggleClass('fa-solid fa-volume-xmark');
-	$(btn).find('i').toggleClass('fa-solid fa-volume-high');
+	$(button).find('i').toggleClass('fa-volume-mute');
+	$(button).find('i').toggleClass('fa-volume-up');
 }
 
 function previewEnded() {
@@ -17,6 +17,7 @@ function goBack() {
 
 function startHideTimer() {
 	var timeout = null;
+
 	$(document).on('mousemove', () => {
 		clearTimeout(timeout);
 		$('.watchNav').fadeIn();
@@ -37,6 +38,7 @@ function updateProgressTimer(videoId, username) {
 	addDuration(videoId, username);
 
 	var timer;
+
 	$('video')
 		.on('playing', (event) => {
 			window.clearInterval(timer);
@@ -102,4 +104,17 @@ function setStartTime(videoId, username) {
 			});
 		}
 	);
+}
+
+function restartVideo() {
+	$('video')[0].currentTime = 0;
+	$('video')[0].play();
+	$('.upNext').fadeOut();
+}
+function watchVideo(videoId) {
+	window.location.href = `watch.php?id=${videoId}`;
+}
+
+function showUpNext() {
+	$('.upNext').fadeIn();
 }
