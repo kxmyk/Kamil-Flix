@@ -1,9 +1,7 @@
 <?php
 require_once("includes/header.php");
-require_once("includes/classes/Account.php");
-require_once("includes/classes/FormSanitizer.php");
-require_once("includes/classes/Constants.php");
-require_once("includes/classes/User.php");
+require_once('./vendor/autoload.php');
+
 
 $detailsMessage = "";
 $passwordMessage = "";

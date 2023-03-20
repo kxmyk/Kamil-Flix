@@ -1,14 +1,8 @@
 <?php
+
+require_once('./vendor/autoload.php');
 require_once('./includes/config.php');
-require_once('./includes/classes/PreviewProvider.php');
-require_once('./includes/classes/CategoryContainers.php');
-require_once('./includes/classes/Entity.php');
-require_once('./includes/classes/EntityProvider.php');
-require_once('./includes/classes/ErrorMessage.php');
-require_once('./includes/classes/SeasonProvider.php');
-require_once('./includes/classes/Season.php');
-require_once('./includes/classes/Video.php');
-require_once('./includes/classes/VideoProvider.php');
+
 
 if (!isset($_SESSION['userLoggedIn'])) {
   header('location: register.php');
